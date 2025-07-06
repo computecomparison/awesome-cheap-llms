@@ -3,7 +3,6 @@
   <p align="center">
     :yellow_heart: <a href="https://www.linkedin.com/posts/magdalenakuhn_costs-of-rag-explained-activity-7181168603906359296-fHEW?utm_source=share&utm_medium=member_desktop">Costs of RAG based applications</a> <br>
     :blue_heart: <a href="https://www.linkedin.com/in/joannastoffregen/">Follow Joanna on LinkedIn</a> :heavy_plus_sign: <a href="https://www.linkedin.com/in/magdalenakuhn/">Follow Magdalena on LinkedIn</a> <br>
-    :white_heart: <a href="https://github.com/DataTalksClub/llm-zoomcamp">Sign up to DataTalksClub LLM Zoomcamp</a> <br>
     :star: Give this repository a star to support the initiative! 
   </p>
 </div>
@@ -43,13 +42,6 @@ After chosing the suitable model family, you should consider models with fewer p
 * Pruning (= removing unnecessary weights, neurons, channels or layers)
 * Knowledge Distillation (= training smaller model that mimics a larger model)
 
-### Tools & Frameworks
-
-- [AutoGPTQ](https://github.com/PanQiWei/AutoGPTQ) – Easy-to-use GPTQ quantization library for squeezing LLMs into 4‑bit/8‑bit weights for faster, cheaper inference.
-- [ExllamaV2](https://github.com/turboderp/exllamav2) – Optimized CUDA & quantization backend for fast inference of LLaMA‑style models.
-
-
-
 ### Papers 
 * Frantar and Alistarh ["SparseGPT: massive Language Models Can be Accurately Pruned in One-Shot"](https://arxiv.org/abs/2301.00774) arXiv preprint arXiv:2301.00774 (2023).
 * Hnton, Vinyals and Dean ["Distilling the Knowledge in a Neural Network](https://arxiv.org/abs/1503.02531) arXiv:1503.02531
@@ -57,7 +49,9 @@ After chosing the suitable model family, you should consider models with fewer p
 ### Tools & frameworks
 * [PyTorch Prune](https://pytorch.org/tutorials/intermediate/pruning_tutorial.html)
 * [PyTorch Quantization](https://pytorch.org/docs/stable/quantization.html)
-* [LoRA](https://huggingface.co/docs/diffusers/training/lora#lora) and [QLoRA](https://medium.com/@dillipprasad60/qlora-explained-a-deep-dive-into-parametric-efficient-fine-tuning-in-large-language-models-llms-c1a4794b1766) make training large models more efficient
+* [LoRA](https://huggingface.co/docs/diffusers/training/lora#lora) and [QLoRA](https://medium.com/@dillipprasad60/qlora-explained-a-deep-dive-into-parametric-efficient-fine-tuning-in-large-language-models-llms-c1a4794b1766) make training large models more efficient 
+* [AutoGPTQ](https://github.com/PanQiWei/AutoGPTQ) – Easy-to-use GPTQ quantization library for squeezing LLMs into 4‑bit/8‑bit weights for faster, cheaper inference.
+* [ExllamaV2](https://github.com/turboderp/exllamav2) – Optimized CUDA & quantization backend for fast inference of LLaMA‑style models.
 
 ### Blog posts & courses
 * [Basics of quantization in ML](https://iq.opengenus.org/basics-of-quantization-in-ml/)
@@ -66,22 +60,19 @@ After chosing the suitable model family, you should consider models with fewer p
 ## 3) :blue_book: Use open source models
 Consider self-hosting models instead of using proprietary models if you have capable developers in house. Still, have an oversight of Total Cost of Ownership, when benchmarking managed LLMs vs. setting up everything on your own. 
 
-### Tools & Frameworks
-
-- [llama.cpp](https://github.com/ggerganov/llama.cpp) – C/C++ CPU+GPU engine for running LLaMA-family models locally with low memory requirements.
-- [Oobabooga Text Generation WebUI](https://github.com/oobabooga/text-generation-webui) – User-friendly interface to run quantized and GGUF-based models like Mistral, LLaMA, or WizardLM locally.
-
-
 ### Papers  
 * :speaking_head: call-for-contributions :speaking_head: 
 ### Tools & frameworks
 * [LocalAI](https://github.com/mudler/LocalAI)
 * [Ollama ](https://github.com/ollama/ollama)
 * [vLLM](https://github.com/vllm-project/vllm)
-* [llama.cpp](https://github.com/ggerganov/llama.cpp)
+* [llama.cpp](https://github.com/ggerganov/llama.cpp) – C/C++ CPU+GPU engine for running LLaMA-family models locally with low memory requirements.
+* [Oobabooga Text Generation WebUI](https://github.com/oobabooga/text-generation-webui) – User-friendly interface to run quantized and GGUF-based models like Mistral, LLaMA, or WizardLM locally.
+
 ### Blog posts & courses
 * [5x easy ways to run an llm locally](https://www.infoworld.com/article/3705035/5-easy-ways-to-run-an-llm-locally.html)
 * [mlabonne/llm-course#deploying-llms](https://github.com/mlabonne/llm-course?tab=readme-ov-file#6-deploying-llms)
+
 ## 4) :blue_book: Reduce input/output tokens
 A key cost driver is the amount of input tokens (user prompt + context) and output tokens, that you allow for your LLM. Different techniques to reduce the amount of tokens help in saving costs. <br>
 **Input tokens:**
@@ -95,18 +86,11 @@ A key cost driver is the amount of input tokens (user prompt + context) and outp
 * Prompting to instruct the LLM how many output tokens are desired
 * Prompting to instruct the LLM to be concise in the answer, adding no explanation text to the expected answer
 
-### Tools & Frameworks
-
-- [LLMLingua](https://github.com/microsoft/LLMLingua) – Prompt compression tool from Microsoft that reduces input token count by summarizing or rewriting prompts with minimal quality loss.
-- [ShortGPT](https://github.com/RayVentura/ShortGPT) – Experimental AI framework for automating short/video content creation via LLM‑driven scripts, voiceovers, captions, and token‑efficient prompting.
-
-
-
 ### Papers  
 * :speaking_head: call-for-contributions :speaking_head: 
 ### Tools & frameworks 
-* [LLMLingua](https://github.com/microsoft/LLMLingua) by Microsoft to compress input prompts
-* :speaking_head: call-for-contributions :speaking_head: 
+* [LLMLingua](https://github.com/microsoft/LLMLingua) Prompt compression tool from Microsoft that reduces input token count by summarizing or rewriting prompts with minimal quality loss.
+* [ShortGPT](https://github.com/RayVentura/ShortGPT) – Experimental AI framework for automating short/video content creation via LLM‑driven scripts, voiceovers, captions, and token‑efficient prompting.
 ### Blog posts & courses
 * [General Tips for Designing Prompts | Prompt Engineering Guide](https://www.promptingguide.ai/introduction/tips)
 * :speaking_head: call-for-contributions :speaking_head: 
